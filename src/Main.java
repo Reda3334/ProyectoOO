@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // Clase principal de la aplicación
@@ -59,7 +60,14 @@ public class Main {
             System.out.println("3. Listar usuarios");
             System.out.println("0. Salir");
 
-            int opcion = Integer.parseInt(sc.nextLine());
+            int opcion;
+            try{
+                opcion = Integer.parseInt(sc.nextLine());
+            }
+            catch(NumberFormatException e){
+                System.out.println("Introduzca un numero.");
+                continue;
+            }
 
             switch (opcion) {
                 case 1:
@@ -98,7 +106,14 @@ public class Main {
             System.out.println("6. Crear tarea en un proyecto");
             System.out.println("0. Salir");
 
-            int opcion = Integer.parseInt(sc.nextLine());
+            int opcion;
+            try{
+                opcion = Integer.parseInt(sc.nextLine());
+            }
+            catch(NumberFormatException e){
+                System.out.println("Introduzca un numero.");
+                continue;
+            }
 
             switch (opcion) {
                 case 1:
@@ -210,7 +225,14 @@ public class Main {
             System.out.println("3. Marcar tarea como finalizada");
             System.out.println("0. Salir");
 
-            int opcion = Integer.parseInt(sc.nextLine());
+            int opcion;
+            try{
+                opcion = Integer.parseInt(sc.nextLine());
+            }
+            catch(NumberFormatException e){
+                System.out.println("Introduzca un numero.");
+                continue;
+            }
 
             switch (opcion) {
                 case 1:
